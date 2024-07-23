@@ -27,9 +27,14 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: var(--cor01);
     font-family: var(--fonte-padrao);
+    position: relative;
 }
 
 a.externo::after {
@@ -206,4 +211,38 @@ footer p a {
 footer a:hover {
     text-decoration: underline;
     color: var(--cor01);
+}
+
+#toUp {
+    background-color: rgb(0, 72, 255);
+    color: white;
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    top: 80vh;
+    right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6em;
+    transform: scale(1);
+    transition: 0.5s ease;
+    border-radius: 50%;
+}
+
+#toUp:hover {
+    background-color: rgb(59, 187, 0);
+    color: white;
+    animation: scale 1s forwards;
+    box-shadow: 1px 2px 4px  black;
+    border: 1px solid #063d1e;
+}
+
+@keyframes scale {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+    }
 }
